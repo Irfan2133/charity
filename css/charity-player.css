@@ -1,0 +1,160 @@
+
+/*custome css*/
+.charity-player{}
+.charity-player .playlist{
+    display: none;
+}
+.charity-player .player {
+    display: flex;
+}
+.left-side {
+    flex: 1.3;
+    display: flex;
+    align-items: center;
+}
+.left-side .cover {
+    width: 118px;
+    height: 93px;
+    background-size: cover;
+    background-position: center center;
+    float: left;
+    margin-right: 32px;
+    transition: all 0.3s ease 0s;
+}
+.left-side .info{
+    overflow: hidden;
+}
+.left-side .info .title{
+    font-size: 18px;
+    color: #ffffff;
+}
+.left-side .info .artist,
+.left-side .info .date{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.left-side .info .date{
+    color: #f8c218;
+    float: left;
+    margin-right: 5px;
+}
+
+.right-side {
+    flex: 1;
+    position: relative;
+}
+.right-side .controls {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    left: 0;
+    top: 50px;
+    width: 100%;
+}
+.right-side .controls  > div{
+    display: inline-block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.right-side .controls  > div:hover{
+    color: #f8c218;
+}
+.right-side .controls .rew{
+    margin: 0px 20px;
+}
+.right-side .controls .play,
+.right-side .controls .pause{
+    color: #f8c218;
+    position: absolute;
+    left: calc(50% - 6px);
+    z-index: 2;
+}
+.right-side .controls .pause{
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.right-side .controls .pause.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.right-side .controls .fwd{
+    margin: 0px 20px;
+}
+.right-side .controls .stop{
+    display: none;
+}
+.right-side .progressbar{
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    top: 31px;
+    border-radius: 5px;
+}
+.right-side .progressbar .bar-loaded {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: #8b8989;
+    transition: all 0.3s ease 0s;
+}
+.right-side .progressbar .bar-played {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: #3a3a3a;
+    transition: all 0.3s ease 0s;
+}
+.right-side .timeHolder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-side .timeHolder .time-current,
+.right-side .timeHolder .time-duration {
+    font-size: 11px;
+    color: #fff;
+    font-weight: 600;
+}
+.right-side .timeHolder .time-separator{
+    display: none;
+}
+
+.volume {
+    height: 11px;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    width: 140px;
+    z-index: 5;
+}
+.volume-btn {
+    display: none;
+}
+.volume-adjust {
+    height: 11px;
+    position: relative;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.05);
+    float: right;
+    cursor: pointer;
+}
+.volume-adjust  > div > div {
+    height: 11px;
+    background: #f8c218;
+}
